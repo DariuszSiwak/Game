@@ -9,11 +9,9 @@ game.forEach(() => {
 
     newDiv.addEventListener('click', () => {
         if(newDiv.classList.contains('card__back')) {
-
             newDiv.classList.remove('card__back')
             newDiv.classList.add('card__back--animation')
             newDiv.style['animation-name'] ='rotate'
-
         } else {
             newDiv.classList.add('card__back')
             newDiv.classList.remove('card__back--animation')
