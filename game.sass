@@ -1,0 +1,55 @@
+@import 'variables'
+
+.container
+    width: 100vw
+    height: 100vh
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+
+    &__text
+        display: flex
+        flex-direction: row
+        justify-content: space-around
+        align-items: center
+        width: 100px
+
+    &__background
+        height: 600px
+        width: 800px
+        background-color: $colorBackground
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-around
+        align-items: center
+
+        .card
+            height: 140px
+            width: 150px
+            background-image: url("https://media.istockphoto.com/vectors/sleeping-cats-vector-id506885031")
+            border: 2px solid  $colorBorder
+            background-size: cover
+            
+            &__back
+                background-image: url("https://artimento.pl/environment/cache/images/1200_1200_productGfx_1305/Neonowy-kotek-Artimento.webp")
+                background-size: cover
+                transform: rotateY(360deg)
+                animation-duration: 2s
+
+                &--animation
+                    animation-duration: 2s
+
+        @keyframes rotate
+            0% 
+                transform: rotateY(90deg)
+
+            100% 
+                transform: rotateY(0deg)
+            
+        @keyframes rotate__back
+            0% 
+                transform: rotateY(90deg)
+
+            100% 
+                transform: rotateY(0deg)
