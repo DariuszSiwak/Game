@@ -1,21 +1,23 @@
-const container = document.getElementsByClassName('container__background')[0]
-
-// const game = Array.from(Array(20)).map(() => {
-//     url: ("https://artimento.pl/environment/cache/images/1200_1200_productGfx_1305/Neonowy-kotek-Artimento.webp")
-// })
+const [element] = document.getElementsByClassName('container__background')
 
 const game = Array.from(Array(20))
 
-game.forEach(item => {
+game.forEach(() => {
     const newDiv = document.createElement('div')
     newDiv.classList.add('card')
-    container.appendChild(newDiv)
+    element.appendChild(newDiv)
 
     newDiv.addEventListener('click', () => {
-        
-        newDiv.classList.add('back')
-        newDiv.style['animation-name'] ='rotate'
-        // newDiv.classList.remove('card')
+        if(newDiv.classList.contains('card__back')) {
 
+            newDiv.classList.remove('card__back')
+            newDiv.classList.add('card__back--animation')
+            newDiv.style['animation-name'] ='rotate'
+
+        } else {
+            newDiv.classList.add('card__back')
+            newDiv.classList.remove('card__back--animation')
+            newDiv.style['animation-name'] ='rotate__back'
+        }
     })
 })
