@@ -13,7 +13,7 @@
         flex-direction: row
         justify-content: space-around
         align-items: center
-        width: 100px
+        width: 200px
         margin-top: 100px
 
     &__background
@@ -28,48 +28,42 @@
         .card
             height: 140px
             width: 150px
-            background-image: url("https://media.istockphoto.com/vectors/sleeping-cats-vector-id506885031")
             border: 2px solid  $colorBorder
             background-size: cover
             
             &__back
-                background-image: url("https://artimento.pl/environment/cache/images/1200_1200_productGfx_1305/Neonowy-kotek-Artimento.webp")
                 background-size: cover
                 transform: rotateY(360deg)
                 animation-duration: 1s
                 perspective: 23rem
                 transform-style: preserve-3d
                 animation-fill-mode: forwards
+                animation-name: rotate__back
 
                 &--animation
                     animation-duration: 1s
                     perspective: 23rem
                     transform-style: preserve-3d
                     animation-fill-mode: forwards
-                   
-                   
+                    animation-name: rotate
+
         @keyframes rotate
             0% 
                 transform: rotateY(0deg) scale(1.1)
-                background-image: url("https://media.istockphoto.com/vectors/sleeping-cats-vector-id506885031")
             50% 
                 transform: rotateY(90deg) scale(1.2)
-                background-image: url("https://media.istockphoto.com/vectors/sleeping-cats-vector-id506885031")
             51% 
-                background-image: url("https://artimento.pl/environment/cache/images/1200_1200_productGfx_1305/Neonowy-kotek-Artimento.webp")
+                
             100%
                 transform: rotateY(0deg)
-                background-image: url("https://artimento.pl/environment/cache/images/1200_1200_productGfx_1305/Neonowy-kotek-Artimento.webp")
             
         @keyframes rotate__back 
             0% 
                 transform: rotateY(0deg) scale(1.1)
-                background-image: url("https://artimento.pl/environment/cache/images/1200_1200_productGfx_1305/Neonowy-kotek-Artimento.webp")
             50%
                 transform: rotateY(90deg) scale(1.2)
-                background-image: url("https://artimento.pl/environment/cache/images/1200_1200_productGfx_1305/Neonowy-kotek-Artimento.webp")
             51% 
-                background-image: url("https://media.istockphoto.com/vectors/sleeping-cats-vector-id506885031")
+               
             100%
                 transform: rotate(0deg)
-                background-image: url("https://media.istockphoto.com/vectors/sleeping-cats-vector-id506885031")
+               
